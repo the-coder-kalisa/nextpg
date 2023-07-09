@@ -11,15 +11,9 @@ export default function Dashboard() {
     return <div>Loading...</div>;
   }
 
-  if (session === null) {
-    // User is not authenticated, redirect to the login page
-    router.replace("/login");
-    return null;
-  }
 
-  return (
-    <div className="min-h-screen flex items-center justify-center">
-      <h1>Welcome, {session.user.email}!</h1>
-    </div>
-  );
+router.replace("/api/auth/signin");
+
+  
+  return null;
 }

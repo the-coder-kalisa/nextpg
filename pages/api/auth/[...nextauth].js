@@ -9,7 +9,7 @@ import crypto from "crypto";
 export const authOptions = {
   adapter: PrismaAdapter(prisma),
   providers: [
-    EmailProvider({ 
+    EmailProvider({
       from: process.env.GMAIL_ADDRESS,
       id: "email",
       server: {
@@ -26,7 +26,7 @@ export const authOptions = {
           expires: Number.parseInt(process.env.GMAIL_OAUTH_TOKEN_EXPIRE, 10),
         },
       },
-      // 
+      //
     }),
   ],
 };
